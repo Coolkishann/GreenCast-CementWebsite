@@ -59,6 +59,7 @@ export default function About() {
         subtitle="Our journey to excellence in dry mortar solutions"
         category="VVF Industries"
         breadcrumbs={[{ name: 'About' }]}
+        bgImage="/about_bg.png"
       />
 
       {/* Narrative Section */}
@@ -200,7 +201,7 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="lg:col-span-7 flex flex-col gap-6"
+            className="lg:col-span-6 flex flex-col gap-6"
           >
             <div className="flex flex-col gap-3">
               <span className="text-secondary font-semibold text-sm uppercase tracking-widest flex items-center gap-2 font-mono">
@@ -220,11 +221,11 @@ export default function About() {
                   key={item}
                   className="flex flex-col bg-transparent group"
                 >
-                  <span className="font-display font-black text-4xl text-secondary/15 group-hover:text-secondary transition-colors duration-500 mb-1 block font-mono">
+                  <span className="font-display font-black text-5xl md:text-6xl text-secondary/15 group-hover:text-secondary transition-colors duration-500 mb-1 block font-mono">
                     0{idx + 1}
                   </span>
                   <div className="h-[1px] w-full bg-outline-variant/20 mb-3 group-hover:bg-secondary transition-colors duration-500" />
-                  <span className="text-xs font-bold text-on-surface group-hover:text-secondary transition-colors duration-300 font-sans">
+                  <span className="text-sm md:text-base font-bold text-on-surface group-hover:text-secondary transition-colors duration-300 font-sans">
                     {item}
                   </span>
                 </div>
@@ -238,7 +239,7 @@ export default function About() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="lg:col-span-5 aspect-[4/3] rounded-3xl overflow-hidden shadow-xl border border-outline-variant/10 bg-zinc-100"
+            className="lg:col-span-6 aspect-[4/3] rounded-3xl overflow-hidden shadow-xl border border-outline-variant/10 bg-zinc-100"
           >
             <img
               className="w-full h-full object-cover"
@@ -258,7 +259,7 @@ export default function About() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="lg:col-span-5 aspect-[4/3] rounded-3xl overflow-hidden shadow-xl border border-outline-variant/10 bg-zinc-100 lg:order-1 order-2"
+            className="lg:col-span-6 aspect-[4/3] rounded-3xl overflow-hidden shadow-xl border border-outline-variant/10 bg-zinc-100 lg:order-1 order-2"
           >
             <img
               className="w-full h-full object-cover"
@@ -273,7 +274,7 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="lg:col-span-7 flex flex-col gap-6 lg:order-2 order-1"
+            className="lg:col-span-6 flex flex-col gap-6 lg:order-2 order-1"
           >
             <div className="flex flex-col gap-3">
               <span className="text-secondary font-semibold text-sm uppercase tracking-widest flex items-center gap-2 font-mono">
@@ -287,14 +288,14 @@ export default function About() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-6">
               {whyChooseUs.map((pillar, idx) => (
                 <div key={pillar.title} className="flex flex-col bg-transparent group">
-                  <span className="font-display font-black text-4xl text-secondary/15 group-hover:text-secondary transition-colors duration-500 mb-1 block font-mono">
+                  <span className="font-display font-black text-5xl md:text-6xl text-secondary/15 group-hover:text-secondary transition-colors duration-500 mb-1 block font-mono">
                     0{idx + 1}
                   </span>
                   <div className="h-[1px] w-full bg-outline-variant/20 mb-3 group-hover:bg-secondary transition-colors duration-500" />
-                  <h4 className="font-bold text-xs text-on-surface mb-1.5 group-hover:text-secondary transition-colors duration-300 font-sans">
+                  <h4 className="font-bold text-sm md:text-base text-on-surface mb-1.5 group-hover:text-secondary transition-colors duration-300 font-sans">
                     {pillar.title}
                   </h4>
-                  <p className="text-[11px] text-on-surface-variant/90 leading-relaxed font-sans">
+                  <p className="text-xs md:text-sm text-on-surface-variant/90 leading-relaxed font-sans">
                     {pillar.desc}
                   </p>
                 </div>
@@ -307,20 +308,7 @@ export default function About() {
       {/* Bottom tagline statement */}
       <section className="py-24 px-6 md:px-16 border-t border-outline-variant/10 w-full bg-transparent">
         <div className="max-w-[1280px] mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          {/* Vision Image */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="lg:col-span-6 aspect-video lg:aspect-square rounded-3xl overflow-hidden shadow-xl border border-outline-variant/10 bg-zinc-100"
-          >
-            <img
-              className="w-full h-full object-cover"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtK-DixwfNv2M2Vxymq9BwVOAes57wnBvp3qeerixT07lSdu1iG7crTOrJV2R_VQujafm8YaaBLMHY-MNVH-fjpoWq5PQ63UUadZguepSg6mI06fSVmshH2RuFMeCe9dB0h0YSpawZDB_ix0j2Pumeb0tDAJo1OnNbI4Rn583shJrq3YOAD7vPmKbYSUcjgb4pYBokZR9_pnxCZVnz7eZ9kii242UzyXuXnB6ZQSmdjTGLnX949qV6J4PyEoDSVdoxH6n2nvJ7y6k"
-              alt="Sustainable modern architecture showing concrete facade"
-            />
-          </motion.div>
+
 
           {/* Vision Text */}
           <motion.div
@@ -342,6 +330,20 @@ export default function About() {
                 Go Green, Build Green
               </span>
             </div>
+          </motion.div>
+          {/* Vision Image */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="lg:col-span-6 aspect-video lg:aspect-square rounded-3xl overflow-hidden shadow-xl border border-outline-variant/10 bg-zinc-100"
+          >
+            <img
+              className="w-full h-full object-cover"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtK-DixwfNv2M2Vxymq9BwVOAes57wnBvp3qeerixT07lSdu1iG7crTOrJV2R_VQujafm8YaaBLMHY-MNVH-fjpoWq5PQ63UUadZguepSg6mI06fSVmshH2RuFMeCe9dB0h0YSpawZDB_ix0j2Pumeb0tDAJo1OnNbI4Rn583shJrq3YOAD7vPmKbYSUcjgb4pYBokZR9_pnxCZVnz7eZ9kii242UzyXuXnB6ZQSmdjTGLnX949qV6J4PyEoDSVdoxH6n2nvJ7y6k"
+              alt="Sustainable modern architecture showing concrete facade"
+            />
           </motion.div>
         </div>
       </section>

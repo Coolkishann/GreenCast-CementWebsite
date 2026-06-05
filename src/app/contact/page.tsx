@@ -43,6 +43,7 @@ export default function Contact() {
         subtitle="Specify your technical cement requirements. Our engineering team responds to all material calculations and consultation queries within 24 hours."
         category="Consultations"
         breadcrumbs={[{ name: 'Contact' }]}
+        bgImage="/contact_bg.png"
       />
 
       {/* Main Form and Office Details Grid - Transparent layout */}

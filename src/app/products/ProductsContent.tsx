@@ -95,6 +95,7 @@ export default function ProductsContent() {
         subtitle="Discover our premium range of high-purity, structural white cement products. Engineered for architects and developers who demand both form and function."
         category="Our Solutions"
         breadcrumbs={[{ name: 'Products' }]}
+        bgImage="/products_bg.png"
       />
 
       {/* Catalog & Filters */}

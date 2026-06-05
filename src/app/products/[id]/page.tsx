@@ -164,6 +164,7 @@ export default function ProductDetail({ params }: { params: Promise<{ id: string
         subtitle={product.desc}
         category="Product Details"
         breadcrumbs={[{ name: 'Products', href: '/products' }, { name: product.name }]}
+        bgImage="/products_bg.png"
       />
 
       {/* Main Product Showcase - Borderless and transparent */}

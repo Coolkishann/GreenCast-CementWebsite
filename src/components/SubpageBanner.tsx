@@ -8,20 +8,21 @@ interface SubpageBannerProps {
   subtitle: string;
   category: string;
   breadcrumbs?: { name: string; href?: string }[];
+  bgImage?: string;
 }
 
-export default function SubpageBanner({ title, subtitle, category, breadcrumbs }: SubpageBannerProps) {
+export default function SubpageBanner({ title, subtitle, category, breadcrumbs, bgImage }: SubpageBannerProps) {
   return (
     <section className="relative text-on-secondary overflow-hidden w-full h-[90vh] flex items-center justify-center border-b border-white/5">
       {/* Background image overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/hero_bg_abstract.png"
+          src={bgImage || "/hero_bg_abstract.png"}
           alt="Banner Background"
-          className="w-full h-full object-cover object-center brightness-[25%] opacity-35"
+          className="w-full h-full object-cover object-center brightness-[80%] opacity-70"
         />
         {/* Soft gradient wash */}
-        {/* <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#191c1d]/90" /> */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#191c1d]/80" />
       </div>
 
       {/* Background abstract texture grid */}

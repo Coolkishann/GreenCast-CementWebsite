@@ -53,6 +53,7 @@ export default function Clients() {
         subtitle="Partnering with global architectural leaders and structural engineering firms to build the landmarks of tomorrow."
         category="Our Network"
         breadcrumbs={[{ name: 'Clients' }]}
+        bgImage="/clients_bg.png"
       />
 
       {/* Partnership Record Summary (Transparent cards) */}
