@@ -217,71 +217,140 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* Styled Interactive Map Dashboard */}
-      <section className="bg-transparent py-20 px-6 md:px-16 w-full border-t border-outline-variant/10">
+      {/* Regional Offices Grid Section */}
+      <section className="py-24 px-6 md:px-16 border-t border-outline-variant/10 w-full bg-transparent">
         <div className="max-w-[1280px] mx-auto w-full">
-          <div className="mb-12 flex justify-between items-end flex-wrap gap-4">
-            <div>
-              <span className="text-secondary font-semibold text-sm uppercase tracking-widest block mb-2">Facility Map</span>
-              <h2 className="font-display font-bold text-2xl md:text-4xl tracking-tight text-on-surface">Distribution & Production Centres</h2>
-            </div>
-            <div className="flex gap-3 bg-transparent p-1.5 rounded-xl border border-outline-variant/15 text-xs font-semibold text-on-surface">
-              <span className="px-3 py-1.5 rounded-lg bg-secondary/10 text-secondary flex items-center gap-1.5 font-mono">
-                <Navigation className="w-3.5 h-3.5" /> Corporate HQ
-              </span>
-              <span className="px-3 py-1.5 text-on-surface-variant flex items-center gap-1.5 font-mono">
-                <Clock className="w-3.5 h-3.5" /> Refinement Plant
-              </span>
-            </div>
+          <div className="mb-12">
+            <span className="text-secondary font-semibold text-sm uppercase tracking-widest block mb-2 font-mono">Regional Presence</span>
+            <h2 className="font-display font-bold text-2xl md:text-4xl tracking-tight text-on-surface">Our Regional Offices</h2>
           </div>
 
-          {/* Styled SVG Map Canvas */}
-          <div className="w-full aspect-[21/9] min-h-[300px] bg-transparent rounded-3xl border border-outline-variant/10 shadow-inner relative overflow-hidden flex items-center justify-center p-8 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:24px_24px]">
-            {/* Mock Map Markings & Gridlines */}
-            <div className="absolute inset-0 z-0 flex items-center justify-center opacity-30">
-              <div className="w-[80%] h-[80%] border border-dashed border-outline/30 rounded-full" />
-              <div className="w-[50%] h-[50%] border border-dashed border-outline/30 rounded-full" />
-            </div>
-
-            {/* Location 1: Corporate HQ */}
-            <div className="absolute left-[30%] top-[40%] z-10 flex flex-col items-center">
-              <motion.div
-                animate={{ scale: [1, 1.15, 1] }}
-                transition={{ repeat: Infinity, duration: 2.5 }}
-                className="w-5 h-5 rounded-full bg-secondary text-on-secondary flex items-center justify-center shadow-lg shadow-secondary/30 relative cursor-pointer"
-                title="VVF Industries HQ"
-              >
-                <div className="absolute inset-0 rounded-full bg-secondary/30 animate-ping" />
-                <Navigation className="w-2.5 h-2.5 transform rotate-45" />
-              </motion.div>
-              <div className="mt-2 glass-card py-1.5 px-3 rounded-lg text-[10px] font-bold text-on-surface uppercase tracking-wider text-center shadow-md">
-                VVF Industries HQ
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full">
+            {/* Mumbai */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="flex flex-col sm:flex-row rounded-3xl overflow-hidden border border-outline-variant/10 bg-transparent group"
+            >
+              <div className="w-full sm:w-1/2 p-8 flex flex-col justify-center bg-surface-container-low/30">
+                <span className="text-[10px] font-bold uppercase tracking-widest text-secondary mb-2 font-mono">Registered Office</span>
+                <h3 className="font-display font-bold text-xl text-on-surface mb-3">Mumbai</h3>
+                <p className="text-xs text-on-surface-variant leading-relaxed font-sans">
+                  116A, 11th Floor,<br />
+                  Maker Chambers VI, 220,<br />
+                  Nariman Point,<br />
+                  Mumbai 400 021
+                </p>
               </div>
-            </div>
-
-            {/* Location 2: Calcination Plant */}
-            <div className="absolute right-[35%] bottom-[35%] z-10 flex flex-col items-center">
-              <motion.div
-                animate={{ scale: [1, 1.15, 1] }}
-                transition={{ repeat: Infinity, duration: 2.5, delay: 0.7 }}
-                className="w-5 h-5 rounded-full bg-emerald-700 text-on-secondary flex items-center justify-center shadow-lg shadow-emerald-700/30 relative cursor-pointer"
-                title="Chikhli Manufacturing Facility"
-              >
-                <div className="absolute inset-0 rounded-full bg-emerald-700/30 animate-ping" />
-                <div className="w-2 h-2 rounded-full bg-white" />
-              </motion.div>
-              <div className="mt-2 glass-card py-1.5 px-3 rounded-lg text-[10px] font-bold text-on-surface uppercase tracking-wider text-center shadow-md">
-                Chikhli Manufacturing Facility
+              <div className="w-full sm:w-1/2 aspect-video sm:aspect-auto sm:min-h-[200px] relative overflow-hidden bg-zinc-100">
+                <img
+                  src="/mumbai_office.png"
+                  alt="VVF Industries Mumbai Office Skyline"
+                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-102 transition-transform duration-500"
+                />
               </div>
-            </div>
+            </motion.div>
 
-            {/* Geographical details box */}
-            <div className="absolute bottom-6 left-6 z-10 glass-card p-4 rounded-xl hidden md:block max-w-xs shadow-lg font-sans">
-              <span className="text-[9px] uppercase font-bold text-secondary tracking-widest block mb-1 font-mono">Geographical Focus</span>
-              <p className="text-[11px] text-on-surface-variant leading-relaxed">
-                Supply chain hubs are strategically located for express coastal freight shipping and direct rail networks, ensuring prompt batch distribution.
-              </p>
-            </div>
+            {/* Nagpur */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="flex flex-col sm:flex-row rounded-3xl overflow-hidden border border-outline-variant/10 bg-transparent group"
+            >
+              <div className="w-full sm:w-1/2 p-8 flex flex-col justify-center bg-surface-container-low/30">
+                <span className="text-[10px] font-bold uppercase tracking-widest text-secondary mb-2 font-mono">Regional Branch</span>
+                <h3 className="font-display font-bold text-xl text-on-surface mb-3">Nagpur</h3>
+                <p className="text-xs text-on-surface-variant leading-relaxed font-sans">
+                  Madhu-Madhav Towers,<br />
+                  Laxmi Bhuvan Square,<br />
+                  Dharampeth,<br />
+                  Nagpur 440 010
+                </p>
+              </div>
+              <div className="w-full sm:w-1/2 aspect-video sm:aspect-auto sm:min-h-[200px] relative overflow-hidden bg-zinc-100">
+                <img
+                  src="/nagpur_office.png"
+                  alt="VVF Industries Nagpur Office Deekshabhoomi"
+                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-102 transition-transform duration-500"
+                />
+              </div>
+            </motion.div>
+
+            {/* New Delhi */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="flex flex-col sm:flex-row rounded-3xl overflow-hidden border border-outline-variant/10 bg-transparent group"
+            >
+              <div className="w-full sm:w-1/2 p-8 flex flex-col justify-center bg-surface-container-low/30">
+                <span className="text-[10px] font-bold uppercase tracking-widest text-secondary mb-2 font-mono">Regional Branch</span>
+                <h3 className="font-display font-bold text-xl text-on-surface mb-3">New Delhi</h3>
+                <p className="text-xs text-on-surface-variant leading-relaxed font-sans">
+                  305, Arunachal Building,<br />
+                  19 Barakhamba Road,<br />
+                  New Delhi 110 001
+                </p>
+              </div>
+              <div className="w-full sm:w-1/2 aspect-video sm:aspect-auto sm:min-h-[200px] relative overflow-hidden bg-zinc-100">
+                <img
+                  src="/delhi_office.png"
+                  alt="VVF Industries Delhi Office India Gate"
+                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-102 transition-transform duration-500"
+                />
+              </div>
+            </motion.div>
+
+            {/* Pune */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="flex flex-col sm:flex-row rounded-3xl overflow-hidden border border-outline-variant/10 bg-transparent group"
+            >
+              <div className="w-full sm:w-1/2 p-8 flex flex-col justify-center bg-surface-container-low/30">
+                <span className="text-[10px] font-bold uppercase tracking-widest text-secondary mb-2 font-mono">Regional Branch</span>
+                <h3 className="font-display font-bold text-xl text-on-surface mb-3">Pune</h3>
+                <p className="text-xs text-on-surface-variant leading-relaxed font-sans">
+                  Flat No. 12, Shubham Heights,<br />
+                  opposite Karve Road DMart,<br />
+                  Kothrud,<br />
+                  Pune 411 038
+                </p>
+              </div>
+              <div className="w-full sm:w-1/2 aspect-video sm:aspect-auto sm:min-h-[200px] relative overflow-hidden bg-zinc-100">
+                <img
+                  src="/pune_office.png"
+                  alt="VVF Industries Pune Office Fort Entrance"
+                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-102 transition-transform duration-500"
+                />
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Google Maps Embed Section */}
+      <section className="bg-transparent py-20 px-6 md:px-16 w-full border-t border-outline-variant/10">
+        <div className="max-w-[1280px] mx-auto w-full">
+          <div className="mb-12">
+            <span className="text-secondary font-semibold text-sm uppercase tracking-widest block mb-2 font-mono">Location Map</span>
+            <h2 className="font-display font-bold text-2xl md:text-4xl tracking-tight text-on-surface">Find Us on Google Maps</h2>
+          </div>
+
+          <div className="w-full aspect-[21/9] min-h-[350px] md:min-h-[450px] bg-transparent rounded-3xl border border-outline-variant/10 overflow-hidden shadow-md relative">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d7258.051149405455!2d72.80603044426297!3d19.43190087938428!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sdmart%20bolinj%20virar%20west!5e1!3m2!1sen!2sin!4v1780661044303!5m2!1sen!2sin"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen={true}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="absolute inset-0 w-full h-full"
+            ></iframe>
           </div>
         </div>
       </section>

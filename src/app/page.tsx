@@ -68,7 +68,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="flex flex-col w-full -mt-20">
+    <div className="flex flex-col w-full">
       {/* Hero Section */}
       <HeroCarousel />
 
@@ -442,16 +442,6 @@ export default function Home() {
               </div>
             </Link>
 
-            {/* Calling button */}
-            <a
-              href="tel:0254582215"
-              className="inline-flex items-center gap-3 bg-white hover:bg-white/95 text-black px-8 py-4 rounded-full font-bold text-xs uppercase tracking-widest transition-all active:scale-95 shadow-lg"
-            >
-              <div className="w-6 h-6 rounded-full bg-secondary text-white flex items-center justify-center">
-                <Phone className="w-3.5 h-3.5 animate-pulse" />
-              </div>
-              <span>(02) 5458 2215</span>
-            </a>
           </div>
         </div>
       </section>

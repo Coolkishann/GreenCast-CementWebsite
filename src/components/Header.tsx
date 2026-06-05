@@ -58,7 +58,6 @@ export default function Header() {
             </span>
           </Link>
 
-          {/* Desktop Navigation Links */}
           <nav className="hidden md:flex gap-10 items-center">
             {navLinks.map((link) => {
               const isActive = pathname === link.href;
@@ -88,13 +87,13 @@ export default function Header() {
               <Menu className="w-6 h-6" />
             </button>
             <a
-              href="tel:0254582215"
+              href="tel:+918369770601"
               className="hidden md:flex items-center gap-2 bg-secondary text-on-secondary px-5 py-2.5 rounded-full font-bold text-xs uppercase tracking-widest hover:opacity-90 transition-all active:scale-95 shadow-md shadow-secondary/10"
             >
               <Phone className="w-3.5 h-3.5" />
-              <span>(02) 5458 2215</span>
+              <span>+91 83697 70601</span>
             </a>
-          </div>
+          </div>        
         </div>
       </header>
 

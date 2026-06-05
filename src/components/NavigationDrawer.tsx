@@ -63,12 +63,12 @@ export default function NavigationDrawer({ isOpen, onClose, navLinks, pathname }
         
         <div className="mt-auto">
           <a
-            href="tel:0254582215"
+            href="tel:+918369770601"
             onClick={onClose}
             className="w-full text-center flex items-center justify-center gap-2 bg-secondary text-on-secondary py-4 rounded-xl font-semibold uppercase tracking-wider hover:opacity-90 transition-opacity"
           >
             <Phone className="w-4 h-4" />
-            <span>Call (02) 5458 2215</span>
+            <span>Call +91 83697 70601</span>
           </a>
         </div>
       </motion.div>

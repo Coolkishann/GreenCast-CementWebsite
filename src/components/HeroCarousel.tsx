@@ -72,7 +72,7 @@ export default function HeroCarousel() {
   };
 
   return (
-    <section className="relative h-screen min-h-[600px] w-full overflow-hidden bg-black">
+    <section className="relative h-screen w-full overflow-hidden bg-black">
       <AnimatePresence initial={false} custom={direction}>
         <motion.div
           key={current}
