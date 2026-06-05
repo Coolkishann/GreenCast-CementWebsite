@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Products | ALBA CEMENT</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-error-container": "#93000a",
+                    "on-surface": "#191c1d",
+                    "tertiary": "#2d694c",
+                    "on-primary-fixed": "#1a1c1c",
+                    "surface-tint": "#5d5f5f",
+                    "on-secondary-container": "#0f7427",
+                    "surface": "#f8f9fa",
+                    "on-surface-variant": "#444748",
+                    "surface-variant": "#e1e3e4",
+                    "secondary-fixed-dim": "#7edb7f",
+                    "on-secondary-fixed-variant": "#005316",
+                    "outline": "#747878",
+                    "tertiary-fixed-dim": "#95d4b0",
+                    "surface-container-low": "#f3f4f5",
+                    "error": "#ba1a1a",
+                    "secondary-fixed": "#99f899",
+                    "on-error": "#ffffff",
+                    "primary-fixed": "#e2e2e2",
+                    "on-primary-container": "#747676",
+                    "on-secondary": "#ffffff",
+                    "primary-fixed-dim": "#c6c6c7",
+                    "background": "#f8f9fa",
+                    "on-tertiary-fixed": "#002112",
+                    "primary-container": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "secondary-container": "#99f899",
+                    "inverse-surface": "#2e3132",
+                    "tertiary-container": "#ffffff",
+                    "on-tertiary-fixed-variant": "#0f5136",
+                    "on-tertiary-container": "#458262",
+                    "outline-variant": "#c4c7c8",
+                    "inverse-primary": "#c6c6c7",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-fixed": "#002105",
+                    "surface-container": "#edeeef",
+                    "tertiary-fixed": "#b1f1cb",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-highest": "#e1e3e4",
+                    "on-background": "#191c1d",
+                    "secondary": "#016e21",
+                    "primary": "#5d5f5f",
+                    "inverse-on-surface": "#f0f1f2",
+                    "surface-container-high": "#e7e8e9",
+                    "on-primary-fixed-variant": "#454747",
+                    "surface-dim": "#d9dadb",
+                    "surface-bright": "#f8f9fa",
+                    "error-container": "#ffdad6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-sm": "12px",
+                    "stack-lg": "80px",
+                    "container-max": "1280px",
+                    "stack-md": "32px",
+                    "margin-desktop": "64px",
+                    "margin-mobile": "20px",
+                    "base": "8px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "display-lg": ["Inter"],
+                    "caption": ["Inter"],
+                    "label-md": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "headline-lg": ["Inter"],
+                    "body-md": ["Inter"],
+                    "headline-lg-mobile": ["Inter"]
+            },
+            "fontSize": {
+                    "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "caption": ["12px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-effect {
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        body {
+            background-color: #f8f9fa;
+        }
+        .filter-pill.active {
+            background-color: #99f899;
+            color: #002105;
+        }
+        /* Reveal animation styles */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s cubic-bezier(0.21, 1.02, 0.73, 1), transform 0.8s cubic-bezier(0.21, 1.02, 0.73, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* Soft Integrated Shadow for Products */
+        .product-shadow {
+            filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.05)) drop-shadow(0 4px 6px rgba(0, 0, 0, 0.03));
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-white/20 shadow-sm shadow-secondary/5">
+<nav class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="flex items-center gap-2 cursor-pointer active:scale-95 duration-200">
+<span class="material-symbols-outlined text-secondary" data-icon="architecture">architecture</span>
+<span class="font-headline-md text-headline-md font-bold text-on-surface tracking-tighter">ALBA CEMENT</span>
+</div>
+<!-- Desktop Nav -->
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">Home</a>
+<a class="font-label-md text-label-md uppercase tracking-wider text-secondary font-bold border-b-2 border-secondary pb-1" href="#">Products</a>
+<a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">Clients</a>
+<a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">Contact</a>
+</div>
+<div class="cursor-pointer active:scale-95 duration-200">
+<span class="material-symbols-outlined text-secondary" data-icon="menu">menu</span>
+</div>
+</nav>
+</header>
+<main class="pt-32 pb-stack-lg">
+<!-- Hero Section -->
+<section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-stack-lg">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-gutter">
+<div class="max-w-2xl">
+<span class="font-label-md text-label-md uppercase text-secondary tracking-widest mb-4 block">Architectural Excellence</span>
+<h1 class="font-display-lg text-display-lg md:text-display-lg text-on-surface mb-stack-sm leading-tight">Superior Purity in Every Particle.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Our white cement is engineered for architects who demand structural integrity without compromising aesthetic serenity. Sustainable, ultra-refined, and globally trusted.</p>
+</div>
+</div>
+</section>
+<!-- Product Interface -->
+<section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<!-- Category Filter -->
+<div class="flex flex-wrap gap-4 mb-stack-md border-b border-outline-variant pb-base">
+<button class="filter-pill active font-label-md text-label-md px-6 py-2 rounded-full border border-secondary transition-all" onclick="filterProducts('all')">All Products</button>
+<button class="filter-pill font-label-md text-label-md px-6 py-2 rounded-full border border-outline-variant text-on-surface-variant hover:border-secondary transition-all" onclick="filterProducts('construction')">Construction</button>
+<button class="filter-pill font-label-md text-label-md px-6 py-2 rounded-full border border-outline-variant text-on-surface-variant hover:border-secondary transition-all" onclick="filterProducts('decorative')">Decorative</button>
+<button class="filter-pill font-label-md text-label-md px-6 py-2 rounded-full border border-outline-variant text-on-surface-variant hover:border-secondary transition-all" onclick="filterProducts('industrial')">Industrial</button>
+</div>
+<!-- Bento Product Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter" id="product-grid">
+<!-- Large Featured Card -->
+<div class="product-card reveal md:col-span-8 group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col md:flex-row" data-category="construction">
+<div class="md:w-1/2 h-[400px] bg-surface-container flex items-center justify-center p-stack-md overflow-hidden relative">
+<img alt="ALBA Premium Construction Cement" class="max-w-[80%] product-shadow group-hover:scale-105 transition-transform duration-500" data-alt="A highly detailed studio photograph of a premium white cement bag..." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0jVmotF2bBiWNB4YHJmaepiBqaV16iH-Y-vQPCEpDy02OymuT4DJhSico36zYbOQhwVYo3SWl9pN1Nlp_APEyiZdJ6loa7yu2-sWfXktZBpzIHA1xHh-UAeBLPbfhVCKuDR84_9hmwiO3zpKZlXKnxOgWIWLw21Hydck-nXSbGgXcEgp5DPXIL-ls1phiPKnLkcETa85iI4Awmz_23-CYYj1qU0XxLnz82ylILb9XEGxbQ0EcL28olQ4iNwl0O8DSNCJQo2vQoas"/>
+</div>
+<div class="md:w-1/2 p-stack-md flex flex-col justify-center">
+<span class="font-label-md text-label-md text-secondary uppercase mb-2">High-Strength Foundation</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4">ALBA Structural Pure</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Optimized for high-rise developments and massive infrastructure where structural integrity meets the visual clarity of pure white finishes.</p>
+<div class="flex items-center gap-4">
+<button class="bg-secondary-container text-on-secondary-container font-label-md text-label-md uppercase px-6 py-3 rounded-lg hover:brightness-95 transition-all">View Details</button>
+<span class="material-symbols-outlined text-outline" data-icon="share">share</span>
+</div>
+</div>
+</div>
+<!-- Small Card 1 -->
+<div class="product-card reveal md:col-span-4 group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow" data-category="decorative">
+<div class="h-64 bg-[#f0fdf4] flex items-center justify-center p-stack-sm relative overflow-hidden">
+<img alt="ALBA Decorative White" class="max-w-[70%] product-shadow group-hover:scale-110 transition-transform duration-500" data-alt="A minimalist product shot..." src="https://lh3.googleusercontent.com/aida-public/AB6AXuClYJ4kw1dg8xWbo59yedJlBWjYLywd2kkDUV-7phLpzn2Xu-n_VIXSljGDFuTSLZ469-HD3Lkinyj0r1ZklokgWTpjS9SMIoNZkQO95hhfGBe_jCyNL8BiQPVjw0C8QmA7Ftt9Jpn8grnMw3Y1Zi3L778L_DAOdopT8_ErppueVS0AdDqB8-jnRULkrIwddIRi5kom8VZ4EjZB5KD_lYSAMYhewwza5hMdajn4klMbHYFuFcuX5RGlVIxDeoTYTu6-pcpplxqNPJI"/>
+</div>
+<div class="p-stack-md">
+<h4 class="font-label-md text-label-md font-bold mb-1">ALBA Deco Finish</h4>
+<p class="font-caption text-caption text-on-surface-variant mb-4">Perfect for terrazzo, ornate molding, and interior accents.</p>
+<button class="w-full border border-secondary text-secondary font-label-md text-label-md uppercase py-2 rounded-lg hover:bg-secondary-container transition-colors">View Details</button>
+</div>
+</div>
+<!-- Small Card 2 -->
+<div class="product-card reveal md:col-span-4 group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow" data-category="industrial">
+<div class="h-64 bg-surface-container flex items-center justify-center p-stack-sm relative overflow-hidden">
+<img alt="ALBA Industrial Grade" class="max-w-[70%] product-shadow group-hover:scale-110 transition-transform duration-500" data-alt="A professional product visualization..." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2PM2bo3V6CCFsoZO1R9Y3B1W1hl9d4cnLYyk4uw94NYoz6XG7aTrXPEIuA66SqbPnYQ1Vm1LFrShV4W85C09cJ7appTJhUE6EeucPCEBCd80O0zQ5m1gI5xX66Oeic7iuJxWDof7J8r7TmRR6yI8Uf43VmUJnD3wvyodVHM3FVrpMr1LX2xhH5iemGK4ZKGG7lToxDPX2fWP3DnlRq81Z3YZ3L9IEsdECy6V_xAMcKlLQ9l-PZh1BJWwMGGNAt_mXlwPySDUVdjU"/>
+</div>
+<div class="p-stack-md">
+<h4 class="font-label-md text-label-md font-bold mb-1">ALBA Industrial Bulk</h4>
+<p class="font-caption text-caption text-on-surface-variant mb-4">Engineered for large scale pre-cast and manufacturing plants.</p>
+<button class="w-full border border-secondary text-secondary font-label-md text-label-md uppercase py-2 rounded-lg hover:bg-secondary-container transition-colors">View Details</button>
+</div>
+</div>
+<!-- Small Card 3 -->
+<div class="product-card reveal md:col-span-4 group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow" data-category="construction">
+<div class="h-64 bg-[#f0fdf4] flex items-center justify-center p-stack-sm relative overflow-hidden">
+<img alt="ALBA Quick Set" class="max-w-[70%] product-shadow group-hover:scale-110 transition-transform duration-500" data-alt="An editorial-style product shot..." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9H37_RVHCUrwNJGralKzyOEFxfPtChkcg3A8tdiK3euaeHah1XMyqxzZCXfnGJGHQ_wegMI5CwcJtYd4MxBgjaK3ChC8p9fP80L9ogQghtKEmIz55Us_vgFooVw9uq0x1OL9u2dog4lQj6hCl1GI28QW_hE41_9qlN5rJ4DJl1x4goN4hzm6h1M3juBmQz08AScrs1RPkJ2qkYF0RNaMjJyo0tLZZwJVeessdB_KsGKtFecevUx0zzLZTu0VDOesJ_qHK_rKAPak"/>
+</div>
+<div class="p-stack-md">
+<h4 class="font-label-md text-label-md font-bold mb-1">ALBA Rapid Build</h4>
+<p class="font-caption text-caption text-on-surface-variant mb-4">High early strength development for tight project timelines.</p>
+<button class="w-full border border-secondary text-secondary font-label-md text-label-md uppercase py-2 rounded-lg hover:bg-secondary-container transition-colors">View Details</button>
+</div>
+</div>
+<!-- Small Card 4 -->
+<div class="product-card reveal md:col-span-4 group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow" data-category="decorative">
+<div class="h-64 bg-surface-container flex items-center justify-center p-stack-sm relative overflow-hidden">
+<img alt="ALBA Sculpt Grade" class="max-w-[70%] product-shadow group-hover:scale-110 transition-transform duration-500" data-alt="A sophisticated product photography piece..." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZc8XZBBvTP25Rz0vntURDWx8Ff_s9KNjqOD9A3ddepZcQynWAUHDLbT7HFbJTQykvU7J2JU_aJfMtRA1N9QeYQAsIiQprh-VWrN9eoiAcJHFa1DC_7bSl3-4dh5i6qvU5iZvP0Xb3wwjdCagIQfU4aKwncJefLHxVNLnEHy2tss8xVcFksOyM7xIDnzUw18oGJ1NOnTroZEOxKvwp_l_1xDv2wo7tlXr5ejs5NHooYR7Z4g-99nNoji-pDxke099XwR-7SfHJorI"/>
+</div>
+<div class="p-stack-md">
+<h4 class="font-label-md text-label-md font-bold mb-1">ALBA Artisan Sculpt</h4>
+<p class="font-caption text-caption text-on-surface-variant mb-4">Enhanced workability for fine architectural detailing.</p>
+<button class="w-full border border-secondary text-secondary font-label-md text-label-md uppercase py-2 rounded-lg hover:bg-secondary-container transition-colors">View Details</button>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="mt-stack-lg px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="bg-secondary rounded-xl p-stack-md md:p-stack-lg text-on-secondary flex flex-col md:flex-row items-center justify-between gap-gutter">
+<div class="max-w-xl text-center md:text-left">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-4 text-white">Project Specific Formulations</h2>
+<p class="font-body-lg text-body-lg text-secondary-fixed">Looking for a custom mix for your skyscraper or landmark? Our laboratory works with leading structural engineers.</p>
+</div>
+<button class="bg-white text-secondary font-label-md text-label-md uppercase px-8 py-4 rounded-lg hover:bg-secondary-container transition-all flex items-center gap-2 shrink-0">
+                    Consult an Engineer
+                    <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-stack-lg bg-surface-container-highest">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop py-stack-md max-w-container-max mx-auto">
+<div class="md:col-span-1">
+<div class="font-label-md text-label-md font-black text-on-surface mb-4">ALBA CEMENT</div>
+<p class="font-caption text-caption text-on-surface-variant">Defining the skyline with purity and strength since 1984. Lead with serenity.</p>
+</div>
+<div>
+<div class="font-label-md text-label-md font-bold text-on-surface mb-4">Products</div>
+<ul class="space-y-2">
+<li><a class="font-caption text-caption text-on-surface-variant hover:text-secondary transition-colors" href="#">Structural Pure</a></li>
+<li><a class="font-caption text-caption text-on-surface-variant hover:text-secondary transition-colors" href="#">Decorative White</a></li>
+<li><a class="font-caption text-caption text-on-surface-variant hover:text-secondary transition-colors" href="#">Industrial Bulk</a></li>
+</ul>
+</div>
+<div>
+<div class="font-label-md text-label-md font-bold text-on-surface mb-4">Technical</div>
+<ul class="space-y-2">
+<li><a class="font-caption text-caption text-on-surface-variant hover:text-secondary transition-colors" href="#">Sustainability</a></li>
+<li><a class="font-caption text-caption text-on-surface-variant hover:text-secondary transition-colors" href="#">Technical Specs</a></li>
+<li><a class="font-caption text-caption text-on-surface-variant hover:text-secondary transition-colors" href="#">Global Distribution</a></li>
+</ul>
+</div>
+<div>
+<div class="font-label-md text-label-md font-bold text-on-surface mb-4">Support</div>
+<ul class="space-y-2">
+<li><a class="font-caption text-caption text-on-surface-variant hover:text-secondary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="font-caption text-caption text-on-surface-variant hover:text-secondary transition-colors" href="#">Contact Expert</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-outline-variant px-margin-mobile md:px-margin-desktop py-6 max-w-container-max mx-auto text-center md:text-left">
+<p class="font-caption text-caption text-on-surface-variant">© 2024 ALBA WHITE CEMENT. ARCHITECTURAL SERENITY.</p>
+</div>
+</footer>
+<script>
+        // Reveal on scroll with staggering
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    // Staggering logic based on visibility in the current batch
+                    setTimeout(() => {
+                        entry.target.classList.add('active');
+                    }, index * 100);
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+        function filterProducts(category) {
+            const cards = document.querySelectorAll('.product-card');
+            const buttons = document.querySelectorAll('.filter-pill');
+            
+            buttons.forEach(btn => {
+                btn.classList.remove('active');
+                if(btn.innerText.toLowerCase().includes(category)) {
+                    btn.classList.add('active');
+                } else if(category === 'all' && btn.innerText.toLowerCase().includes('all')) {
+                    btn.classList.add('active');
+                }
+            });
+
+            cards.forEach((card, index) => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'flex';
+                    // Re-trigger reveal animation for filtered items
+                    card.classList.remove('active');
+                    card.style.opacity = '0';
+                    setTimeout(() => {
+                        card.classList.add('active');
+                        card.style.opacity = '1';
+                        card.style.transitionDelay = `${index * 50}ms`;
+                    }, 10);
+                } else {
+                    card.style.display = 'none';
+                    card.classList.remove('active');
+                }
+            });
+        }
+
+        // Parallax effect for product floating images
+        window.addEventListener('mousemove', (e) => {
+            const images = document.querySelectorAll('img[data-alt]');
+            const mouseX = e.clientX / window.innerWidth;
+            const mouseY = e.clientY / window.innerHeight;
+
+            images.forEach(img => {
+                const speed = 15;
+                const x = (0.5 - mouseX) * speed;
+                const y = (0.5 - mouseY) * speed;
+                img.style.transform = `translate(${x}px, ${y}px) scale(1.05)`;
+            });
+        });
+    </script>
+</body></html>
