@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowRight, Sparkles, Send, CheckCircle2, ArrowUpRight, Award, Compass, Database, Phone, MessageSquare } from 'lucide-react';
+import { ArrowRight, Sparkles, Send, CheckCircle2, ArrowUpRight, Award, Compass, Database, Phone, MessageSquare, Lightbulb, ShieldCheck, Leaf } from 'lucide-react';
 import HeroCarousel from '@/components/HeroCarousel';
 import Footer from '@/components/Footer';
 
@@ -12,27 +12,27 @@ export default function Home() {
 
   const featuredProducts = [
     {
-      id: 'superior-white',
-      name: 'Green Cast Superior White',
-      grade: '52.5N Grade',
-      desc: 'Our flagship structural white cement, engineered for load-bearing architectural panels and highly reflective concrete elements.',
-      image: '/alba_superior_bag.png',
+      id: 'ready-mix-plaster',
+      name: 'Ready Mix Plaster (RMP)',
+      grade: 'Premium Plaster',
+      desc: 'Pre-mixed cement-based plaster designed for high-quality interior and exterior wall coating, offering excellent workability, coverage, and crack resistance.',
+      image: '/green-cast-bag.png',
       accent: 'text-emerald-800'
     },
     {
-      id: 'eco-cement',
-      name: 'Green Cast Eco-Cement',
-      grade: 'Sustainable Choice',
-      desc: 'Formulated to reduce carbon emissions by 30% while maintaining the pristine white aesthetic demanded by modern designers.',
-      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAPAfrhmcHITRVCFTjdrYoLSRUYIihbqZs0d1irkthc2ZiY6YFrSaw7yPBNhCBgB4DmASDciUMFa2h05F-M6fIscojPXzCF4d6m6QUt41SrfdATUxe9_5xxpKd31OkPohfSRxrCDegnfirN7ZcadNTU1B2AeOaAPQupubg8wIaeZaBTi4QgCPvyuRKgJ696vk4MYO6ZUuI1pmgK8WSx_PROisF6E10GdhyY9QsFLqFmLYKqbDwV9e5zdOXBEyWSZeA1EwlaPI_sEIA',
+      id: 'micro-concrete',
+      name: 'Micro Concrete',
+      grade: 'Flowable Grout',
+      desc: 'Chloride-free, flowable repair micro concrete with excellent base concrete bonding and long working times for reinstatement of large structural sections.',
+      image: '/green-cast-bag.png',
       accent: 'text-teal-800'
     },
     {
-      id: 'architectural-pro',
-      name: 'Green Cast Architectural Pro',
-      grade: 'Ultra-Fine Grade',
-      desc: 'An ultra-fine cement blend designed for intricate decorative moldings, precast elements, and polished interior surfaces.',
-      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAZp0QmLcxFNVbAF4TrZ_efI5PeYpqiHKVU2Y8dMC8jQqSh747ZAr1GAZNIt8i3Jm9PHWmsKiMSwrwvc8ChxApUxlZu2Wye3b1AlJhCwr1HicCTFCFfkni6s29S_OwMDn3w1qwPB3m_nrFb6okXa6ZIXGVmz0J_Pxk9Xr2PBRiZKedQtVSlruvwSDkoudprrfGdK4YPOfDj4Di4bml8hMO9PTU-m2ZC_BvyoQq5NLcchgKQV6busPS-gmFPkTTOdCnnM8EKcCg3sfs',
+      id: 'tile-adhesives',
+      name: 'Range of Tile Adhesives',
+      grade: 'Multiple Variants',
+      desc: 'Single component, high adhesive bond strength tile adhesive. Available variants: TILE FIX GC1, TILE FIX GC2, TILE FIX GC3, and STONE AND HEAVY TILES ADHESIVES.',
+      image: '/green-cast-bag.png',
       accent: 'text-blue-800'
     }
   ];
@@ -72,8 +72,102 @@ export default function Home() {
       {/* Hero Section */}
       <HeroCarousel />
 
+      {/* The Three Pillars (Foundation) Section */}
+      <section className="py-24 px-6 md:px-16 max-w-[1280px] mx-auto w-full" id="pillars">
+        <div className="text-center mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="flex flex-col items-center gap-2"
+          >
+            <span className="font-sans font-bold text-xs uppercase tracking-widest text-secondary block mb-2">Our Foundation</span>
+            <h2 className="font-display font-bold text-3xl md:text-5xl text-on-surface">The Three Pillars of VVF</h2>
+          </motion.div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {[
+            {
+              title: 'Innovation',
+              desc: 'Continuous R&D to develop next-generation dry mix solutions that enhance building efficiency and structural longevity.',
+              icon: <Lightbulb className="w-8 h-8 text-secondary" />
+            },
+            {
+              title: 'Reliability',
+              desc: 'Consistent quality assurance backed by ISO certifications, ensuring every batch meets rigorous international standards.',
+              icon: <ShieldCheck className="w-8 h-8 text-secondary" />
+            },
+            {
+              title: 'Sustainability',
+              desc: "Committed to 'Go Green Build Green' through sustainable manufacturing processes and eco-friendly material sourcing.",
+              icon: <Leaf className="w-8 h-8 text-secondary" />
+            }
+          ].map((pillar, idx) => (
+            <motion.div
+              key={pillar.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: idx * 0.15 }}
+              className="p-8 rounded-2xl bg-surface-container-low hover:bg-surface-container transition-colors duration-300 group"
+            >
+              <div className="w-16 h-16 rounded-xl bg-secondary-fixed flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                {pillar.icon}
+              </div>
+              <h3 className="font-display font-bold text-xl md:text-2xl mb-4 text-on-surface">{pillar.title}</h3>
+              <p className="text-on-surface-variant text-sm leading-relaxed font-sans">{pillar.desc}</p>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
+      {/* Engineered for Excellence Section */}
+      <section className="grid grid-cols-1 md:grid-cols-2 min-h-[600px] border-t border-outline-variant/10 w-full">
+        <motion.div
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="bg-surface-dim flex items-center justify-center px-6 md:px-16 py-24"
+        >
+          <div className="max-w-md space-y-6">
+            <span className="font-sans font-bold text-xs uppercase tracking-widest text-secondary block">Heritage of Precision</span>
+            <h2 className="font-display font-bold text-3xl md:text-5xl text-on-surface leading-tight">Engineered for Excellence since 2024</h2>
+            <p className="font-sans text-sm md:text-base text-on-surface-variant leading-relaxed">
+              Founded on the principle of architectural purity, Alba Cement by VVF Industries has quickly become the benchmark for high-performance dry mix mortar. Our state-of-the-art facility utilizes advanced chemical formulations to ensure our products meet the rigorous demands of modern structural design.
+            </p>
+            <div className="flex items-center gap-8 pt-4">
+              <div className="text-center">
+                <span className="block font-display font-bold text-3xl md:text-4xl text-secondary">100+</span>
+                <span className="font-sans font-bold text-[10px] text-on-surface uppercase tracking-wider block mt-1">Mega Projects</span>
+              </div>
+              <div className="w-px h-12 bg-outline-variant/40" />
+              <div className="text-center">
+                <span className="block font-display font-bold text-3xl md:text-4xl text-secondary">ISO</span>
+                <span className="font-sans font-bold text-[10px] text-on-surface uppercase tracking-wider block mt-1">Certified</span>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+        
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="relative min-h-[400px] md:min-h-full bg-cover bg-center"
+          style={{
+            backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuAYj-gjZKkCCUry23t3ek3RCDBKZKIY-z90PlPOTcQQvz1Vv4qvpzLtFE44TCYiadWowJx66qqcKuMhVifU5TyCz1-3EmvcB-ZfQb-s1lKQO0C1gbjB-ORCvQdEqQDEgWEtH5gYOy5RgUu-f5zjnbzd4ECmUGnaGGnLLMQoHDk1xxzV5IxoZ7IgqEiQsae9mK76HBn9B1yo9y8bBknYLXuL63huLZoN_p5jfnc6JwCxows22JjTqPdi88NMPbPsgoGH_1sbtsbI2Fc')"
+          }}
+        >
+          <div className="absolute inset-0 bg-secondary/10" />
+        </motion.div>
+      </section>
+
       {/* Client Logos Marquee - Repositioned beneath Hero section with larger height */}
-      <section className="py-16 bg-surface-container-low border-b border-outline-variant/10 overflow-hidden w-full">
+      {/* <section className="py-16 bg-surface-container-low border-b border-outline-variant/10 overflow-hidden w-full">
         <div className="max-w-[1280px] mx-auto px-6 md:px-16 w-full text-center">
           <span className="text-secondary font-bold text-[10px] uppercase tracking-widest block mb-10">
             Trusted by Visionary Firms
@@ -92,7 +186,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* About Summary Section (Fully transparent layout) */}
       <section className="py-28 px-6 md:px-16 max-w-[1280px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-center w-full bg-transparent">
@@ -151,6 +245,83 @@ export default function Home() {
             </div>
           </div>
         </motion.div>
+      </section>
+
+          {/* Simplified Featured Products Showcase (Transparent cards with less info) */}
+      <section className="py-28 px-6 md:px-16 w-full bg-transparent border-t border-outline-variant/10">
+        <div className="max-w-[1280px] mx-auto w-full">
+          <div className="flex justify-between items-end mb-16 w-full">
+            <div>
+              <span className="text-secondary font-semibold text-xs uppercase tracking-widest block mb-2">Our Solutions</span>
+              <h2 className="font-display font-bold text-3xl md:text-5xl tracking-tight text-on-surface">The White Collection</h2>
+            </div>
+            <Link
+              href="/products"
+              className="hidden sm:flex items-center gap-1.5 bg-secondary text-on-secondary px-6 py-3 rounded-full font-bold text-xs uppercase tracking-widest hover:opacity-90 transition-all shadow-md shadow-secondary/10"
+            >
+              All Products
+              <ArrowUpRight className="w-3.5 h-3.5" />
+            </Link>
+          </div>
+
+          {/* Cards with transparent background, no solid blocks, and less text info */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 w-full">
+            {featuredProducts.map((p, idx) => (
+              <motion.div
+                key={p.id}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: idx * 0.15 }}
+                className="group flex flex-col bg-transparent overflow-hidden"
+              >
+                {/* Product Image in a radial container */}
+                <div className="aspect-[4/3] w-full p-6 flex items-center justify-center bg-radial from-white to-surface-container border border-outline-variant/10 rounded-2xl relative overflow-hidden mb-6">
+                  <img
+                    className="max-h-[85%] max-w-[85%] object-contain drop-shadow-2xl transition-transform duration-700 group-hover:scale-105 z-10"
+                    src={p.image}
+                    alt={p.name}
+                  />
+                  <div className="absolute top-4 left-4">
+                    <span className="px-3 py-1 rounded-full text-[9px] font-bold uppercase tracking-widest border border-outline-variant/20 bg-surface/85 backdrop-blur-sm text-on-surface">
+                      {p.grade}
+                    </span>
+                  </div>
+                  <div className="absolute w-40 h-40 rounded-full bg-secondary/5 blur-2xl" />
+                </div>
+
+                {/* Product Info (Minimal metadata) */}
+                <div className="flex flex-col flex-grow px-2">
+                  <h3 className="font-display font-bold text-xl md:text-2xl mb-1 text-on-surface group-hover:text-secondary transition-colors duration-300">
+                    {p.name}
+                  </h3>
+                  <span className="text-[10px] uppercase font-bold text-on-surface-variant/75 tracking-wider mb-4 block">
+                    Collection / {p.grade}
+                  </span>
+
+                  <Link
+                    key={p.id}
+                    href={`/products/${p.id}`}
+                    className="inline-flex items-center gap-1.5 text-secondary font-bold text-xs uppercase tracking-widest hover:translate-x-2 transition-transform duration-300 mt-auto"
+                  >
+                    View Specifications
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          <div className="mt-12 text-center sm:hidden">
+            <Link
+              href="/products"
+              className="inline-flex items-center gap-2 bg-secondary text-on-secondary px-8 py-4 rounded-full font-bold text-xs uppercase tracking-widest hover:opacity-90 transition-all w-full justify-center"
+            >
+              All Products
+              <ArrowUpRight className="w-3.5 h-3.5" />
+            </Link>
+          </div>
+        </div>
       </section>
 
       {/* Bento Grid Concrete Installations Section */}
@@ -273,82 +444,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Simplified Featured Products Showcase (Transparent cards with less info) */}
-      <section className="py-28 px-6 md:px-16 w-full bg-transparent border-t border-outline-variant/10">
-        <div className="max-w-[1280px] mx-auto w-full">
-          <div className="flex justify-between items-end mb-16 w-full">
-            <div>
-              <span className="text-secondary font-semibold text-xs uppercase tracking-widest block mb-2">Our Solutions</span>
-              <h2 className="font-display font-bold text-3xl md:text-5xl tracking-tight text-on-surface">The White Collection</h2>
-            </div>
-            <Link
-              href="/products"
-              className="hidden sm:flex items-center gap-1.5 bg-secondary text-on-secondary px-6 py-3 rounded-full font-bold text-xs uppercase tracking-widest hover:opacity-90 transition-all shadow-md shadow-secondary/10"
-            >
-              All Products
-              <ArrowUpRight className="w-3.5 h-3.5" />
-            </Link>
-          </div>
-
-          {/* Cards with transparent background, no solid blocks, and less text info */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 w-full">
-            {featuredProducts.map((p, idx) => (
-              <motion.div
-                key={p.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: idx * 0.15 }}
-                className="group flex flex-col bg-transparent overflow-hidden"
-              >
-                {/* Product Image in a radial container */}
-                <div className="aspect-[4/3] w-full p-6 flex items-center justify-center bg-radial from-white to-surface-container border border-outline-variant/10 rounded-2xl relative overflow-hidden mb-6">
-                  <img
-                    className="max-h-[85%] max-w-[85%] object-contain drop-shadow-2xl transition-transform duration-700 group-hover:scale-105 z-10"
-                    src={p.image}
-                    alt={p.name}
-                  />
-                  <div className="absolute top-4 left-4">
-                    <span className="px-3 py-1 rounded-full text-[9px] font-bold uppercase tracking-widest border border-outline-variant/20 bg-surface/85 backdrop-blur-sm text-on-surface">
-                      {p.grade}
-                    </span>
-                  </div>
-                  <div className="absolute w-40 h-40 rounded-full bg-secondary/5 blur-2xl" />
-                </div>
-
-                {/* Product Info (Minimal metadata) */}
-                <div className="flex flex-col flex-grow px-2">
-                  <h3 className="font-display font-bold text-xl md:text-2xl mb-1 text-on-surface group-hover:text-secondary transition-colors duration-300">
-                    {p.name}
-                  </h3>
-                  <span className="text-[10px] uppercase font-bold text-on-surface-variant/75 tracking-wider mb-4 block">
-                    Collection / {p.id === 'eco-cement' ? 'Sustainable' : 'Structural'}
-                  </span>
-
-                  <Link
-                    key={p.id}
-                    href={`/products/${p.id}`}
-                    className="inline-flex items-center gap-1.5 text-secondary font-bold text-xs uppercase tracking-widest hover:translate-x-2 transition-transform duration-300 mt-auto"
-                  >
-                    View Specifications
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </Link>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-
-          <div className="mt-12 text-center sm:hidden">
-            <Link
-              href="/products"
-              className="inline-flex items-center gap-2 bg-secondary text-on-secondary px-8 py-4 rounded-full font-bold text-xs uppercase tracking-widest hover:opacity-90 transition-all w-full justify-center"
-            >
-              All Products
-              <ArrowUpRight className="w-3.5 h-3.5" />
-            </Link>
-          </div>
-        </div>
-      </section>
+  
 
       {/* Testimonials Quote Section */}
       <section className="py-24 border-t border-outline-variant/10 w-full bg-surface-container-low/50">

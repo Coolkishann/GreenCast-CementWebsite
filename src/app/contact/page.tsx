@@ -199,7 +199,19 @@ export default function Contact() {
               <div className="flex flex-col">
                 <span className="text-[10px] uppercase font-bold text-on-surface-variant/80 mb-1 font-mono">Technical Consultation Line</span>
                 <span className="text-sm font-semibold text-on-surface">+91 83697 70601</span>
-                <span className="text-xs text-on-surface-variant/90 font-sans">Mon - Sat, 9:00 AM - 6:00 PM IST</span>
+                <span className="text-xs text-on-surface-variant/90 font-sans">For project and formulation inquiries</span>
+              </div>
+            </div>
+
+            {/* Email */}
+            <div className="flex items-start gap-4 p-5 bg-transparent rounded-2xl border border-outline-variant/10 shadow-sm">
+              <div className="p-3 bg-secondary/10 rounded-xl text-secondary flex-shrink-0">
+                <Mail className="w-5 h-5" />
+              </div>
+              <div className="flex flex-col">
+                <span className="text-[10px] uppercase font-bold text-on-surface-variant/80 mb-1 font-mono">Inquiries & Support</span>
+                <span className="text-sm font-semibold text-on-surface">vvfindustries@gmail.com</span>
+                <span className="text-xs text-on-surface-variant/90 font-sans">General and sales queries</span>
               </div>
             </div>
 
@@ -209,9 +221,9 @@ export default function Contact() {
                 <Clock className="w-5 h-5" />
               </div>
               <div className="flex flex-col">
-                <span className="text-[10px] uppercase font-bold text-on-surface-variant/80 mb-1 font-mono">Plant Operating Hours</span>
-                <span className="text-sm font-semibold text-on-surface">24/7 Continuous Calcination</span>
-                <span className="text-xs text-on-surface-variant/90 font-sans">Deliveries Scheduled: Mon - Sat, 6:00 AM - 8:00 PM</span>
+                <span className="text-[10px] uppercase font-bold text-on-surface-variant/80 mb-1 font-mono">Business Hours</span>
+                <span className="text-sm font-semibold text-on-surface">Mon - Fri: 9:00 AM - 6:00 PM</span>
+                <span className="text-xs text-on-surface-variant/90 font-sans">Saturday: 10:00 AM - 4:00 PM | Sunday: Closed</span>
               </div>
             </div>
           </div>

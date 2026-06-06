@@ -2,8 +2,8 @@ import { Suspense } from 'react';
 import ProductsContent from './ProductsContent';
 
 export const metadata = {
-  title: 'Green Cast Collections | White Cement Solutions',
-  description: 'Explore the White Collection by Green Cast, featuring Superior White, Eco-Cement, and Architectural Pro formulations for structural and decorative requirements.',
+  title: 'Green Cast Collections | Dry Mix Mortar Solutions',
+  description: 'Explore our advanced range of dry mix mortars, ready mix plaster, repair polymer mortars, micro concrete, block jointing mortar, and high-performance tile adhesives.',
 };
 
 export default function ProductsPage() {

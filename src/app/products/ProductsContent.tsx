@@ -9,58 +9,80 @@ import SubpageBanner from '@/components/SubpageBanner';
 
 const products = [
   {
-    id: 'superior-white',
-    name: 'Green Cast Superior White',
-    category: 'construction',
-    grade: '52.5N Grade',
-    whiteness: 'Hunter 94',
-    strength: '52.5 MPa',
-    desc: 'Our flagship ultra-high purity cement, specifically engineered for load-bearing architectural concrete, iconic monuments, and white structural columns.',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuC0jVmotF2bBiWNB4YHJmaepiBqaV16iH-Y-vQPCEpDy02OymuT4DJhSico36zYbOQhwVYo3SWl9pN1Nlp_APEyiZdJ6loa7yu2-sWfXktZBpzIHA1xHh-UAeBLPbfhVCKuDR84_9hmwiO3zpKZlXKnxOgWIWLw21Hydck-nXSbGgXcEgp5DPXIL-ls1phiPKnLkcETa85iI4Awmz_23-CYYj1qU0XxLnz82ylILb9XEGxbQ0EcL28olQ4iNwl0O8DSNCJQo2vQoas',
-    icon: <Sparkles className="w-5 h-5" />
-  },
-  {
-    id: 'decorative-white',
-    name: 'Green Cast Decorative White',
-    category: 'decorative',
-    grade: 'Ultra-Fine Finishing',
-    whiteness: 'Hunter 96',
-    strength: '32.5 MPa',
-    desc: 'An ultra-fine clinker blend designed for interior design applications, including terrazzo tiles, polished floors, white plasters, and architectural joints.',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuClYJ4kw1dg8xWbo59yedJlBWjYLywd2kkDUV-7phLpzn2Xu-n_VIXSljGDFuTSLZ469-HD3Lkinyj0r1ZklokgWTpjS9SMIoNZkQO95hhfGBe_jCyNL8BiQPVjw0C8QmA7Ftt9Jpn8grnMw3Y1Zi3L778L_DAOdopT8_ErppueVS0AdDqB8-jnRULkrIwddIRi5kom8VZ4EjZB5KD_lYSAMYhewwza5hMdajn4klMbHYFuFcuX5RGlVIxDeoTYTu6-pcpplxqNPJI',
-    icon: <Brush className="w-5 h-5" />
-  },
-  {
-    id: 'industrial-grade',
-    name: 'Green Cast Industrial Grade',
-    category: 'industrial',
-    grade: 'Bulk Structural Spec',
-    whiteness: 'Hunter 90',
-    strength: '42.5 MPa',
-    desc: 'Cost-effective high-whiteness solution for large-scale precast plants, road curbs, glass-fiber reinforced concrete (GRC), and decorative panel facades.',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuC2PM2bo3V6CCFsoZO1R9Y3B1W1hl9d4cnLYyk4uw94NYoz6XG7aTrXPEIuA66SqbPnYQ1Vm1LFrShV4W85C09cJ7appTJhUE6EeucPCEBCd80O0zQ5m1gI5xX66Oeic7iuJxWDof7J8r7TmRR6yI8Uf43VmUJnD3wvyodVHM3FVrpMr1LX2xhH5iemGK4ZKGG7lToxDPX2fWP3DnlRq81Z3YZ3L9IEsdECy6V_xAMcKlLQ9l-PZh1BJWwMGGNAt_mXlwPySDUVdjU',
+    id: 'ready-mix-plaster',
+    name: 'Ready Mix Plaster (RMP)',
+    category: 'plaster-mortar',
+    grade: 'Premium Plaster',
+    whiteness: 'M15 Spec',
+    strength: 'M15 Grade',
+    desc: 'Pre-mixed cement-based plaster designed for high-quality interior and exterior wall coating, offering excellent workability, coverage, and crack resistance.',
+    image: '/green-cast-bag.png',
     icon: <Layers className="w-5 h-5" />
   },
   {
-    id: 'quick-set',
-    name: 'Green Cast Quick Set',
-    category: 'construction',
-    grade: 'Rapid Setting Spec',
-    whiteness: 'Hunter 92',
-    strength: '42.5R Grade',
-    desc: 'Formulated with accelerators to reduce demolding and setting times. Perfect for fast-track architectural structures and cold-weather construction projects.',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuD9H37_RVHCUrwNJGralKzyOEFxfPtChkcg3A8tdiK3euaeHah1XMyqxzZCXfnGJGHQ_wegMI5CwcJtYd4MxBgjaK3ChC8p9fP80L9ogQghtKEmIz55Us_vgFooVw9uq0x1OL9u2dog4lQj6hCl1GI28QW_hE41_9qlN5rJ4DJl1x4goN4hzm6h1M3juBmQz08AScrs1RPkJ2qkYF0RNaMjJyo0tLZZwJVeessdB_KsGKtFecevUx0zzLZTu0VDOesJ_qHK_rKAPak',
+    id: 'polymer-mortar',
+    name: 'Polymer Mortar (Repair Mortar)',
+    category: 'plaster-mortar',
+    grade: 'Structural Repair',
+    whiteness: '36 N/mm²',
+    strength: '36.0 N/mm²',
+    desc: 'Dual shrinkage compensated, crack-resistant high performance repair mortar. Easy to apply in complex vertical & overhead column profiles without primer.',
+    image: '/green-cast-bag.png',
+    icon: <ShieldCheck className="w-5 h-5" />
+  },
+  {
+    id: 'micro-concrete',
+    name: 'Micro Concrete',
+    category: 'concrete-grout',
+    grade: 'Flowable Grout',
+    whiteness: '55 N/mm²',
+    strength: '55.0 N/mm²',
+    desc: 'Chloride-free, flowable repair micro concrete with excellent base concrete bonding and long working times for reinstatement of large structural sections.',
+    image: '/green-cast-bag.png',
     icon: <Zap className="w-5 h-5" />
   },
   {
-    id: 'sculpt-grade',
-    name: 'Green Cast Sculpt Grade',
-    category: 'decorative',
-    grade: 'Fine Molding Blend',
-    whiteness: 'Hunter 98',
-    strength: '22.5 MPa',
-    desc: 'Our highest whiteness product, milled to an extremely fine grade to support complex textures, sculptures, and detailed stucco moldings without shrinking.',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDZc8XZBBvTP25Rz0vntURDWx8Ff_s9KNjqOD9A3ddepZcQynWAUHDLbT7HFbJTQykvU7J2JU_aJfMtRA1N9QeYQAsIiQprh-VWrN9eoiAcJHFa1DC_7bSl3-4dh5i6qvU5iZvP0Xb3wwjdCagIQfU4aKwncJefLHxVNLnEHy2tss8xVcFksOyM7xIDnzUw18oGJ1NOnTroZEOxKvwp_l_1xDv2wo7tlXr5ejs5NHooYR7Z4g-99nNoji-pDxke099XwR-7SfHJorI',
+    id: 'tile-adhesives',
+    name: 'Range of Tile Adhesives',
+    category: 'adhesives-fillers',
+    grade: 'Multiple Variants',
+    whiteness: 'IS 15477 Spec',
+    strength: 'High Bond',
+    desc: 'Single component, high adhesive bond strength tile adhesive. Available variants: TILE FIX GC1, TILE FIX GC2, TILE FIX GC3, and STONE AND HEAVY TILES ADHESIVES.',
+    image: '/green-cast-bag.png',
+    icon: <Sparkles className="w-5 h-5" />
+  },
+  {
+    id: 'grouting-material',
+    name: 'Grouting Material',
+    category: 'concrete-grout',
+    grade: 'Fluid Anchor',
+    whiteness: '60 N/mm²',
+    strength: '60.0 N/mm²',
+    desc: 'High-flow, non-shrink grouting compound designed for anchoring structural steel, anchor bolts, machinery bases, and general concrete void filling.',
+    image: '/green-cast-bag.png',
+    icon: <Brush className="w-5 h-5" />
+  },
+  {
+    id: 'block-jointing-mortar',
+    name: 'Block Jointing Mortar (BJM)',
+    category: 'plaster-mortar',
+    grade: 'Thin Joint Mortar',
+    whiteness: 'Self-Curing',
+    strength: 'High Adhesion',
+    desc: 'Self-curing thin-joint mortar for AAC block masonry. Seamless structure prevents water seepage and percolation. Coverage up to 160 sq ft per 40kg bag.',
+    image: '/green-cast-bag.png',
+    icon: <Layers className="w-5 h-5" />
+  },
+  {
+    id: 'crack-filler-powder',
+    name: 'Crack Filler Powder',
+    category: 'adhesives-fillers',
+    grade: 'Patching Compound',
+    whiteness: 'Waterproof',
+    strength: 'Non-Shrink',
+    desc: 'Water-resistant, non-shrink crack filler powder requiring only water. Perfect for patching and sealing interior and exterior plaster and concrete joint cracks.',
+    image: '/green-cast-bag.png',
     icon: <ShieldCheck className="w-5 h-5" />
   }
 ];
@@ -78,9 +100,9 @@ export default function ProductsContent() {
 
   const categories = [
     { name: 'All Collection', value: 'all' },
-    { name: 'Construction', value: 'construction' },
-    { name: 'Decorative Finish', value: 'decorative' },
-    { name: 'Industrial Use', value: 'industrial' }
+    { name: 'Plaster & Mortars', value: 'plaster-mortar' },
+    { name: 'Concrete & Grout', value: 'concrete-grout' },
+    { name: 'Adhesives & Fillers', value: 'adhesives-fillers' }
   ];
 
   const filteredProducts = activeCategory === 'all'
@@ -91,9 +113,9 @@ export default function ProductsContent() {
     <div className="flex flex-col w-full">
       {/* Header section with premium dark green SubpageBanner */}
       <SubpageBanner
-        title="The White Collection"
-        subtitle="Discover our premium range of high-purity, structural white cement products. Engineered for architects and developers who demand both form and function."
-        category="Our Solutions"
+        title="Dry Mix Mortar Solutions"
+        subtitle="Explore our advanced range of high-performance plasters, repair mortars, self-curing jointing compounds, and premium tile adhesives."
+        category="Our Collection"
         breadcrumbs={[{ name: 'Products' }]}
         bgImage="/products_bg.png"
       />
@@ -111,11 +133,10 @@ export default function ProductsContent() {
               <button
                 key={cat.value}
                 onClick={() => setActiveCategory(cat.value)}
-                className={`px-5 py-2.5 rounded-full font-semibold text-xs uppercase tracking-wider transition-all cursor-pointer ${
-                  activeCategory === cat.value
+                className={`px-5 py-2.5 rounded-full font-semibold text-xs uppercase tracking-wider transition-all cursor-pointer ${activeCategory === cat.value
                     ? 'bg-secondary text-on-secondary shadow-md shadow-secondary/15'
                     : 'bg-surface-container-low text-on-surface-variant hover:bg-surface-container border border-outline-variant/10'
-                }`}
+                  }`}
               >
                 {cat.name}
               </button>
@@ -136,15 +157,13 @@ export default function ProductsContent() {
                 transition={{ duration: 0.4 }}
                 className="group flex flex-col bg-transparent overflow-hidden"
               >
-                {/* Product Image inside a radial-gradient custom background card */}
-                <div className="aspect-[4/3] w-full p-8 flex items-center justify-center bg-radial from-white to-surface-container border border-outline-variant/10 rounded-3xl relative overflow-hidden mb-6">
+                {/* Product Image */}
+                <div className="aspect-[4/3] w-full border border-outline-variant/10 rounded-3xl relative overflow-hidden mb-6 bg-zinc-100">
                   <img
                     src={p.image}
                     alt={p.name}
-                    className="max-h-[85%] max-w-[85%] object-contain drop-shadow-2xl group-hover:scale-105 transition-transform duration-500 z-10"
+                    className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-500"
                   />
-                  {/* Subtle decorative background circle */}
-                  <div className="absolute w-48 h-48 rounded-full bg-secondary/5 blur-2xl group-hover:bg-secondary/10 transition-colors duration-500" />
                 </div>
 
                 {/* Info Area (Spacious transparent details layout) */}
@@ -153,8 +172,8 @@ export default function ProductsContent() {
                     <span className="px-3 py-1 rounded-full text-[9px] font-bold uppercase tracking-wider bg-secondary/10 text-secondary border border-secondary/20">
                       {p.grade}
                     </span>
-                    <span className="text-[10px] text-on-surface-variant/80 font-semibold uppercase tracking-wider flex items-center gap-1">
-                      {p.whiteness}
+                    <span className="text-[10px] text-on-surface-variant/80 font-bold uppercase tracking-wider flex items-center gap-1">
+                      {p.strength}
                     </span>
                   </div>
 

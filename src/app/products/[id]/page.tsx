@@ -19,116 +19,153 @@ const productDb: Record<string, {
   specs: { label: string; value: string }[];
   applications: { title: string; image: string }[];
 }> = {
-  'superior-white': {
-    name: 'Green Cast Superior White',
-    grade: '52.5N Grade',
-    whiteness: 'Hunter 94',
-    strength: '58.5 MPa',
-    settingTime: '110 minutes',
-    desc: 'Green Cast Superior White is our flagship structural cement. Engineered for prominent load-bearing concrete panels and high-integrity architectural columns, it provides maximum light reflection and pristine visual clarity.',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuC0jVmotF2bBiWNB4YHJmaepiBqaV16iH-Y-vQPCEpDy02OymuT4DJhSico36zYbOQhwVYo3SWl9pN1Nlp_APEyiZdJ6loa7yu2-sWfXktZBpzIHA1xHh-UAeBLPbfhVCKuDR84_9hmwiO3zpKZlXKnxOgWIWLw21Hydck-nXSbGgXcEgp5DPXIL-ls1phiPKnLkcETa85iI4Awmz_23-CYYj1qU0XxLnz82ylILb9XEGxbQ0EcL28olQ4iNwl0O8DSNCJQo2vQoas',
-    certifications: ['ASTM C150 Type I', 'ISO 9001 Quality', 'ISO 14001 Eco'],
+  'ready-mix-plaster': {
+    name: 'Ready Mix Plaster (RMP)',
+    grade: 'Premium Plaster Grade',
+    whiteness: 'N/A',
+    strength: 'M15 Grade',
+    settingTime: '90 minutes',
+    desc: 'VVF Industries Ready Mix Plaster (RMP) is a dry pre-mixed cement-based plaster designed for high-performance interior and exterior wall coating. Made using pure river sand, Portland cement, and premium polymers, it ensures excellent workability, durability, and a highly smooth finish that saves on-site labor and time.',
+    image: '/green-cast-bag.png',
+    certifications: ['ISO 9001 Compliant', 'Quality Lab Verified', 'Eco-Friendly Sand Aggregate'],
     specs: [
-      { label: 'Insoluble Residue', value: '< 0.12%' },
-      { label: 'Loss on Ignition (LOI)', value: '< 1.4%' },
-      { label: 'Specific Surface (Blaine)', value: '410 m²/kg' },
-      { label: 'Initial Setting Time', value: '110 mins' },
-      { label: 'Final Setting Time', value: '175 mins' },
-      { label: '2-Day Strength', value: '26.0 MPa' },
-      { label: '28-Day Strength', value: '58.5 MPa' },
+      { label: 'Base Material', value: 'Portland Cement & Pure River Sand' },
+      { label: 'Water Requirement', value: '18% - 20% by weight' },
+      { label: 'Compressive Strength', value: '> 10 N/mm² (28 Days)' },
+      { label: 'Application Thickness', value: '8mm - 15mm' },
+      { label: 'Coverage (at 12mm)', value: '12 - 15 sq ft per 40kg bag' },
+      { label: 'Pot Life', value: '90 mins' }
     ],
     applications: [
-      { title: 'Futuristic Museum Facades', image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAUUt46qt7JmIFPdXhQYAv7aoSksSSb7fbFW8NGGBNuX2whdTXlcSq3lWwGvvU96hyUGwjBDzzcz48olEP0Hk3B0IUXVvrVJ9d8RtftieWwDH3bRLs5FWvSHbgoGz6ZNI3b1Bga8ikrgZHhBivBFmWIslKe1TOyKupSNRE1P3ngQu5zkaowzwOTwxn8DzSpoBgrdBWq63noTnXvjE1a3JxafjrfhoXd4xjMJiEPBrtLuhHI6Oup2oy9TYhhHZOyXiZcp53vKP5TSPY' },
-      { title: 'Geometric Structural Facades', image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDtK-DixwfNv2M2Vxymq9BwVOAes57wnBvp3qeerixT07lSdu1iG7crTOrJV2R_VQujafm8YaaBLMHY-MNVH-fjpoWq5PQ63UUadZguepSg6mI06fSVmshH2RuFMeCe9dB0h0YSpawZDB_ix0j2Pumeb0tDAJo1OnNbI4Rn583shJrq3YOAD7vPmKbYSUcjgb4pYBokZR9_pnxCZVnz7eZ9kii242UzyXuXnB6ZQSmdjTGLnX949qV6J4PyEoDSVdoxH6n2nvJ7y6k' }
+      { title: 'Exterior Brick & Block Masonry Plastering', image: '/bento_smoothing.png' },
+      { title: 'Interior Smooth Wall Finishing & Ceilings', image: '/bento_trowel.png' }
     ]
   },
-  'decorative-white': {
-    name: 'Green Cast Decorative White',
-    grade: 'Ultra-Fine Finishing',
-    whiteness: 'Hunter 96',
-    strength: '36.2 MPa',
-    settingTime: '130 minutes',
-    desc: 'Formulated for interior design accents, terrazzo tile grout, and decorative overlays, Green Cast Decorative White features high reflectivity and a velvet-smooth finish that works perfectly in modern luxury spaces.',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuClYJ4kw1dg8xWbo59yedJlBWjYLywd2kkDUV-7phLpzn2Xu-n_VIXSljGDFuTSLZ469-HD3Lkinyj0r1ZklokgWTpjS9SMIoNZkQO95hhfGBe_jCyNL8BiQPVjw0C8QmA7Ftt9Jpn8grnMw3Y1Zi3L778L_DAOdopT8_ErppueVS0AdDqB8-jnRULkrIwddIRi5kom8VZ4EjZB5KD_lYSAMYhewwza5hMdajn4klMbHYFuFcuX5RGlVIxDeoTYTu6-pcpplxqNPJI',
-    certifications: ['EN 197-1 CEM I', 'ISO 9001 Quality', 'ISO 50001 Energy'],
+  'polymer-mortar': {
+    name: 'Polymer Mortar (Repair Mortar)',
+    grade: 'Structural Repair Grade',
+    whiteness: 'N/A',
+    strength: '36 N/mm²',
+    settingTime: '60 minutes',
+    desc: 'High-performance, dual shrinkage compensated, polymer-modified structural repair mortar. Specifically formulated for concrete reinstatement in columns, beams, and overhead locations. Highly sprayable with excellent vertical sag resistance and high adhesion without bonding primers.',
+    image: '/green-cast-bag.png',
+    certifications: ['EN 1504-3 Class R3', 'Dual Shrinkage Compensated', 'ISO 9001 Certified'],
     specs: [
-      { label: 'Insoluble Residue', value: '< 0.08%' },
-      { label: 'Loss on Ignition (LOI)', value: '< 1.1%' },
-      { label: 'Specific Surface (Blaine)', value: '450 m²/kg' },
-      { label: 'Initial Setting Time', value: '130 mins' },
-      { label: 'Final Setting Time', value: '200 mins' },
-      { label: '2-Day Strength', value: '14.5 MPa' },
-      { label: '28-Day Strength', value: '36.2 MPa' },
+      { label: 'Compressive Strength', value: '36 N/mm² (28 Days)' },
+      { label: 'Tensile Bond Strength', value: '> 2.0 N/mm²' },
+      { label: 'Fresh Wet Density', value: 'approx. 2.1 kg/litre' },
+      { label: 'Minimum Application Depth', value: '12mm' },
+      { label: 'Maximum Application Depth', value: '50mm' },
+      { label: 'Flexural Strength', value: '> 6.0 N/mm²' }
     ],
     applications: [
-      { title: 'Lobby Floating Staircases', image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDyf22ZcOdDa0ko47Eh-p2OJsBIF1b9qYRHLeVwNQ8zPkC0Y1BWbOHkAvMdzjQd6dWY4hXgHgm0sOUcpoZh95PW5OiBnBBhNipkviMtbBaZeAWREUJDEM7Rue53-CdmXF_kppCWatQbmo59xHlSYgICmYWRENL_oSd4h3J4gpCXlys8Ojm3DM0mKIszSCQBSA002THmMWd4k3TK46Vt3iADCQNYp7fEnmYyohH2KyEMWjEPGDPsQuC6zsPCuLGtadAapAqD_-c7LNI' },
-      { title: 'Polished Flooring & Interiors', image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAxAMpEfscc0mt6wPFAmstxHCd1MWr_t0UzRZy6uCri6pWsHbi4ncLESQ3rndKoxxGoFqSOJ2cynh6gwRdelG3KKla8NDFgPao_q9SxpLCQlL6TFr7eIOp-l247QfGdJ-fGPuVp4X6_rXs8wE4kdKNEUfbikwmQI6E3tBvw4Mh0hGiw2dq4nJlxQNw493a3L0tsfq4sd4hsz1Wb0w4ofbiGcuB369-RgkG_5XDA5enWQgFmkOuFuSG8_z3_O1NbLUVYotzQgYclWtg' }
+      { title: 'Overhead Concrete Beam & Slab Reconstruction', image: '/bento_smoothing.png' },
+      { title: 'Structural Column Repair and Jacketing', image: '/bento_pouring.png' }
     ]
   },
-  'industrial-grade': {
-    name: 'Green Cast Industrial Grade',
-    grade: 'Bulk Structural Spec',
-    whiteness: 'Hunter 90',
-    strength: '45.0 MPa',
+  'micro-concrete': {
+    name: 'Micro Concrete',
+    grade: 'Flowable Non-Shrink Concrete',
+    whiteness: 'N/A',
+    strength: '55 N/mm²',
     settingTime: '120 minutes',
-    desc: 'Cost-effective high-whiteness solution for large-scale precast plants, road curbs, glass-fiber reinforced concrete (GRC), and decorative panel facades.',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuC2PM2bo3V6CCFsoZO1R9Y3B1W1hl9d4cnLYyk4uw94NYoz6XG7aTrXPEIuA66SqbPnYQ1Vm1LFrShV4W85C09cJ7appTJhUE6EeucPCEBCd80O0zQ5m1gI5xX66Oeic7iuJxWDof7J8r7TmRR6yI8Uf43VmUJnD3wvyodVHM3FVrpMr1LX2xhH5iemGK4ZKGG7lToxDPX2fWP3DnlRq81Z3YZ3L9IEsdECy6V_xAMcKlLQ9l-PZh1BJWwMGGNAt_mXlwPySDUVdjU',
-    certifications: ['ASTM C150 Type V', 'ISO 9001 Quality', 'ISO 14001 Environmental'],
+    desc: 'Advanced, flowable, non-shrink, chloride-free micro concrete designed for structural reinstatement of beams, slabs, and columns where access is restricted. Its high fluid flow guarantees complete compaction without vibration while ensuring outstanding bonding to base concrete.',
+    image: '/green-cast-bag.png',
+    certifications: ['Chloride Free Formula', 'Zero Shrinkage Guarantee', 'ISO 9001 Quality'],
     specs: [
-      { label: 'Insoluble Residue', value: '< 0.15%' },
-      { label: 'Loss on Ignition (LOI)', value: '< 1.8%' },
-      { label: 'Specific Surface (Blaine)', value: '380 m²/kg' },
-      { label: 'Initial Setting Time', value: '120 mins' },
-      { label: 'Final Setting Time', value: '185 mins' },
-      { label: '2-Day Strength', value: '18.0 MPa' },
-      { label: '28-Day Strength', value: '45.0 MPa' },
+      { label: 'Compressive Strength (1 Day)', value: '> 20 N/mm²' },
+      { label: 'Compressive Strength (28 Day)', value: '> 55 N/mm²' },
+      { label: 'Flow Spread Diameter', value: '> 250mm' },
+      { label: 'Water Requirement', value: '12% - 14% by weight' },
+      { label: 'Young Modulus', value: '28 kN/mm²' }
     ],
     applications: [
-      { title: 'Architectural Pillars & Columns', image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAOMvJ8oARgNXeGeghYlLPrJhHW9j7tK8SZFOClYiZ4DhdDStcytAgtO3iEfhSihdLBFeMKZLrjhTvk6XzNvpRs8tkypXe8-VP_m1leZMT_n66osGfTBeODLnVwdxEwScwJ1UYyjbtJJBV_OJyapXvqGLWW24gZYHNhoro68oYEQi_tCCMwcnG8hpZhaIS_DeF1gOypjjGrali2FEgNleoPZ5Qoqoj5ZUu4j36G1LVktqOL821X8OQfkzTAbnHrMfYh86ozKN4GPaU' }
+      { title: 'Reinstatement of Large Slabs & Bridge Piers', image: '/bento_driveway.png' },
+      { title: 'High-Strength Concrete Columns Jacketing', image: '/bento_pouring.png' }
     ]
   },
-  'quick-set': {
-    name: 'Green Cast Quick Set',
-    grade: 'Rapid Setting Spec',
-    whiteness: 'Hunter 92',
-    strength: '48.5 MPa',
+  'tile-adhesives': {
+    name: 'Range of Tile Adhesives',
+    grade: 'C1 / C2 / C3 Standards',
+    whiteness: 'N/A',
+    strength: 'High Bond Strength',
     settingTime: '45 minutes',
-    desc: 'Formulated with accelerators to reduce demolding and setting times. Perfect for fast-track architectural structures, pre-cast fabrication plants, and cold-weather construction projects.',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuD9H37_RVHCUrwNJGralKzyOEFxfPtChkcg3A8tdiK3euaeHah1XMyqxzZCXfnGJGHQ_wegMI5CwcJtYd4MxBgjaK3ChC8p9fP80L9ogQghtKEmIz55Us_vgFooVw9uq0x1OL9u2dog4lQj6hCl1GI28QW_hE41_9qlN5rJ4DJl1x4goN4hzm6h1M3juBmQz08AScrs1RPkJ2qkYF0RNaMjJyo0tLZZwJVeessdB_KsGKtFecevUx0zzLZTu0VDOesJ_qHK_rKAPak',
-    certifications: ['ASTM C150 Type III', 'ISO 9001 Quality', 'ISO 45001 Safety'],
+    desc: 'Our single-component, ready-to-use premium tile adhesives cover Vitrified, Ceramic, Stone, and heavy tiles installations. Formulated to provide exceptional bonding strength, excellent workability, and zero slip features. Available in variants: TILE FIX GC1, TILE FIX GC2, TILE FIX GC3, and STONE AND HEAVY TILES ADHESIVES.',
+    image: '/green-cast-bag.png',
+    certifications: ['IS 15477 Compliance', 'Low Shrinkage Formula', 'Single Component Ready Use'],
     specs: [
-      { label: 'Insoluble Residue', value: '< 0.10%' },
-      { label: 'Loss on Ignition (LOI)', value: '< 1.5%' },
-      { label: 'Specific Surface (Blaine)', value: '480 m²/kg' },
-      { label: 'Initial Setting Time', value: '45 mins' },
-      { label: 'Final Setting Time', value: '75 mins' },
-      { label: '1-Day Strength', value: '22.0 MPa' },
-      { label: '28-Day Strength', value: '48.5 MPa' },
+      { label: 'Available Variants', value: 'GC1, GC2, GC3, Stone & Heavy' },
+      { label: 'Tensile Adhesion Strength', value: '> 1.2 N/mm²' },
+      { label: 'Open Time', value: 'approx. 20 mins' },
+      { label: 'Adjustability Time', value: 'approx. 15 mins' },
+      { label: 'Grouting Ready Time', value: 'after 24 hours' }
     ],
     applications: [
-      { title: 'Precast Architectural Panels', image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDtK-DixwfNv2M2Vxymq9BwVOAes57wnBvp3qeerixT07lSdu1iG7crTOrJV2R_VQujafm8YaaBLMHY-MNVH-fjpoWq5PQ63UUadZguepSg6mI06fSVmshH2RuFMeCe9dB0h0YSpawZDB_ix0j2Pumeb0tDAJo1OnNbI4Rn583shJrq3YOAD7vPmKbYSUcjgb4pYBokZR9_pnxCZVnz7eZ9kii242UzyXuXnB6ZQSmdjTGLnX949qV6J4PyEoDSVdoxH6n2nvJ7y6k' }
+      { title: 'Interior Vitrified Wall & Floor Tiling', image: '/bento_trowel.png' },
+      { title: 'Heavy Granite & Exterior Stone Facades', image: '/bento_driveway.png' }
     ]
   },
-  'sculpt-grade': {
-    name: 'Green Cast Sculpt Grade',
-    grade: 'Fine Molding Blend',
-    whiteness: 'Hunter 98',
-    strength: '25.8 MPa',
-    settingTime: '140 minutes',
-    desc: 'Our highest whiteness product, milled to an extremely fine grade to support complex textures, sculptures, and detailed stucco moldings without shrinking or cracking under environmental exposure.',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDZc8XZBBvTP25Rz0vntURDWx8Ff_s9KNjqOD9A3ddepZcQynWAUHDLbT7HFbJTQykvU7J2JU_aJfMtRA1N9QeYQAsIiQprh-VWrN9eoiAcJHFa1DC_7bSl3-4dh5i6qvU5iZvP0Xb3wwjdCagIQfU4aKwncJefLHxVNLnEHy2tss8xVcFksOyM7xIDnzUw18oGJ1NOnTroZEOxKvwp_l_1xDv2wo7tlXr5ejs5NHooYR7Z4g-99nNoji-pDxke099XwR-7SfHJorI',
-    certifications: ['EN 197-1 CEM II', 'ISO 9001 Quality', 'ISO 14025 Environmental'],
+  'grouting-material': {
+    name: 'Grouting Material',
+    grade: 'Non-Shrink Anchoring Grout',
+    whiteness: 'N/A',
+    strength: '60 N/mm²',
+    settingTime: '100 minutes',
+    desc: 'High-flow, non-shrink cementitious grout designed for anchor bolt grouting, structural steel plate column bases, heavy machinery foundations, and filling large concrete voids. Formulated without metallic aggregates or chlorides, ensuring non-staining durability.',
+    image: '/green-cast-bag.png',
+    certifications: ['ASTM C1107 Grade C', 'Non-Corrosive Formula', 'ISO 9001 Quality'],
     specs: [
-      { label: 'Insoluble Residue', value: '< 0.05%' },
-      { label: 'Loss on Ignition (LOI)', value: '< 1.0%' },
-      { label: 'Specific Surface (Blaine)', value: '520 m²/kg' },
-      { label: 'Initial Setting Time', value: '140 mins' },
-      { label: 'Final Setting Time', value: '220 mins' },
-      { label: '2-Day Strength', value: '10.2 MPa' },
-      { label: '28-Day Strength', value: '25.8 MPa' },
+      { label: 'Compressive Strength (1 Day)', value: '22 N/mm²' },
+      { label: 'Compressive Strength (28 Day)', value: '60 N/mm²' },
+      { label: 'Expansion Range', value: '0.2% - 2.0% volume' },
+      { label: 'Water Ratio', value: '16% - 18% by weight' },
+      { label: 'Yield per 25kg Bag', value: 'approx. 13.5 litres' }
     ],
     applications: [
-      { title: 'Fine Art Concrete Sculptures', image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuC5GKCuuxHwCoo-WwWqQlVXXdDpoV8xO4i3yQefJzfxNcnko_1bx6lat-MqVFqr3LGxUT1-uBXLkaUuMOssgTgHPSw8sGoRyRnrfGMESwOhA4hyzgdgnILha0TwrYX7WmNi5Ib471eXeuk5jjoFDr_Q6mcQn1fklpktZ7u1LJZ7EckvuME9_tX1J6OZJAdFk7DgEZO_He2xmZotkmmeryeHz4jiRtBKbiCIXb8ty3zZywpYCYaV0A0TN8rvpF1NScUR0lddSNJqDxQ' }
+      { title: 'Heavy Rotary Machinery Foundation Grouting', image: '/bento_smoothing.png' },
+      { title: 'Structural Anchor Bolt & Precast Node Filling', image: '/bento_trowel.png' }
+    ]
+  },
+  'block-jointing-mortar': {
+    name: 'Block Jointing Mortar (BJM)',
+    grade: 'Thin-Joint Adhesive Mortar',
+    whiteness: 'N/A',
+    strength: 'High Adhesion Strength',
+    settingTime: '75 minutes',
+    desc: 'Self-curing thin-joint block jointing mortar designed for AAC blocks, concrete blocks, clay bricks, and fly ash blocks. The 2-3mm joints ensure a completely seamless wall structure that eliminates water percolation, seepage, and thermal bridging.',
+    image: '/green-cast-bag.png',
+    certifications: ['ASTM C1660 Thin Joint Spec', 'Self-Curing Formula', 'ISO 14001 Compliant'],
+    specs: [
+      { label: 'Dry Density', value: 'approx. 1.6 kg/litre' },
+      { label: 'Joint Thickness', value: '2mm - 3mm' },
+      { label: 'AAC Wall Coverage (4")', value: '140 - 160 sq ft per 40kg bag' },
+      { label: 'AAC Wall Coverage (6")', value: '85 - 90 sq ft per 40kg bag' },
+      { label: 'Tensile Splitting Strength', value: '> 0.48 N/mm²' }
+    ],
+    applications: [
+      { title: 'AAC Block Masonry Wall Installations', image: '/bento_smoothing.png' },
+      { title: 'High-Rise Clay & Concrete Block Walls', image: '/bento_pouring.png' }
+    ]
+  },
+  'crack-filler-powder': {
+    name: 'Crack Filler Powder',
+    grade: 'Waterproof Patching Compound',
+    whiteness: 'N/A',
+    strength: 'Non-Shrink Waterproof',
+    settingTime: '30 minutes',
+    desc: 'Easy-to-use, non-shrink, waterproofing cementitious crack filler. Excellent for sealing plaster and concrete wall joints, fissures, and surface cracks on both interior and exterior substrates. Handles wall micro-movements without debonding.',
+    image: '/green-cast-bag.png',
+    certifications: ['Waterproof Joint Spec', 'Zero Shrinkage Guarantee', 'ISO 9001 Quality'],
+    specs: [
+      { label: 'Water Mixing Ratio', value: '3:1 by volume' },
+      { label: 'Full Drying Time', value: '2 - 3 hours' },
+      { label: 'Maximum Crack Width', value: 'up to 5mm' },
+      { label: 'Paintability', value: 'Compatible with all topcoats' },
+      { label: 'Shrinkage Value', value: '0% Nil' }
+    ],
+    applications: [
+      { title: 'Sealing Exterior Structural Plaster Cracks', image: '/bento_smoothing.png' },
+      { title: 'Filling Internal Concrete Expansion Joins', image: '/bento_pouring.png' }
     ]
   }
 };
@@ -198,8 +235,8 @@ export default function ProductDetail({ params }: { params: Promise<{ id: string
           {/* Key metrics grid */}
           <div className="grid grid-cols-3 gap-6 py-6 border-y border-outline-variant/10">
             <div>
-              <span className="text-[10px] uppercase font-bold text-on-surface-variant/75 block mb-1">Whiteness Value</span>
-              <span className="text-xl font-bold text-secondary">{product.whiteness}</span>
+              <span className="text-[10px] uppercase font-bold text-on-surface-variant/75 block mb-1">Product Grade</span>
+              <span className="text-xl font-bold text-secondary">{product.grade}</span>
             </div>
             <div>
               <span className="text-[10px] uppercase font-bold text-on-surface-variant/75 block mb-1">Setting Time</span>
